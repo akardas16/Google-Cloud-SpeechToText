@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		1EE58818EA8039D88A1AFE30 /* Pods_Google_Cloud_SpeechToText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A49605DFA2F7D4EEEFFDBB7 /* Pods_Google_Cloud_SpeechToText.framework */; };
+		5369F0FA2C2449D100D360FE /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5369F0F92C2449D100D360FE /* MainViewModel.swift */; };
+		5369F0FE2C244F2000D360FE /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5369F0FD2C244F2000D360FE /* Extension.swift */; };
+		53E1C87D2C245249007CF3C4 /* MicrophonePermission in Frameworks */ = {isa = PBXBuildFile; productRef = 53E1C87C2C245249007CF3C4 /* MicrophonePermission */; };
 		53E383802C2443B300D7BD22 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3837F2C2443B300D7BD22 /* MainApp.swift */; };
 		53E383822C2443B300D7BD22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E383812C2443B300D7BD22 /* ContentView.swift */; };
 		53E383842C2443B400D7BD22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E383832C2443B400D7BD22 /* Assets.xcassets */; };
@@ -17,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5369F0F92C2449D100D360FE /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5369F0FD2C244F2000D360FE /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		53E3837C2C2443B300D7BD22 /* Google-Cloud-SpeechToText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google-Cloud-SpeechToText.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53E3837F2C2443B300D7BD22 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		53E383812C2443B300D7BD22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +41,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1EE58818EA8039D88A1AFE30 /* Pods_Google_Cloud_SpeechToText.framework in Frameworks */,
+				53E1C87D2C245249007CF3C4 /* MicrophonePermission in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +83,8 @@
 				53E383812C2443B300D7BD22 /* ContentView.swift */,
 				53E383832C2443B400D7BD22 /* Assets.xcassets */,
 				53E383852C2443B400D7BD22 /* Preview Content */,
+				5369F0F92C2449D100D360FE /* MainViewModel.swift */,
+				5369F0FD2C244F2000D360FE /* Extension.swift */,
 			);
 			path = "Google-Cloud-SpeechToText";
 			sourceTree = "<group>";
@@ -125,6 +133,9 @@
 			dependencies = (
 			);
 			name = "Google-Cloud-SpeechToText";
+			packageProductDependencies = (
+				53E1C87C2C245249007CF3C4 /* MicrophonePermission */,
+			);
 			productName = "Google-Cloud-SpeechToText";
 			productReference = 53E3837C2C2443B300D7BD22 /* Google-Cloud-SpeechToText.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 53E383732C2443B300D7BD22;
+			packageReferences = (
+				53E1C87B2C245249007CF3C4 /* XCRemoteSwiftPackageReference "PermissionsKit" */,
+			);
 			productRefGroup = 53E3837D2C2443B300D7BD22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -221,8 +235,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5369F0FA2C2449D100D360FE /* MainViewModel.swift in Sources */,
 				53E383822C2443B300D7BD22 /* ContentView.swift in Sources */,
 				53E383912C24455700D7BD22 /* AudioController.swift in Sources */,
+				5369F0FE2C244F2000D360FE /* Extension.swift in Sources */,
 				53E383802C2443B300D7BD22 /* MainApp.swift in Sources */,
 				53E383922C24455700D7BD22 /* SpeechRecognitionService.swift in Sources */,
 			);
@@ -363,6 +379,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Speech recognition needs microphone permission to get your voice";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -395,6 +412,7 @@
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Speech recognition needs microphone permission to get your voice";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -436,6 +454,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		53E1C87B2C245249007CF3C4 /* XCRemoteSwiftPackageReference "PermissionsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/sparrowcode/PermissionsKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		53E1C87C2C245249007CF3C4 /* MicrophonePermission */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 53E1C87B2C245249007CF3C4 /* XCRemoteSwiftPackageReference "PermissionsKit" */;
+			productName = MicrophonePermission;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 53E383742C2443B300D7BD22 /* Project object */;
 }

@@ -16,7 +16,7 @@
 import Foundation
 import googleapis
 
-let API_KEY : String = "*********"
+let API_KEY : String = "************"
 let HOST = "speech.googleapis.com"
 
 typealias SpeechRecognitionCompletionHandler = (StreamingRecognizeResponse?, NSError?) -> (Void)
@@ -57,7 +57,7 @@ class SpeechRecognitionService {
       let recognitionConfig = RecognitionConfig()
       recognitionConfig.encoding =  .linear16
       recognitionConfig.sampleRateHertz = Int32(sampleRate)
-      recognitionConfig.languageCode = "tr-TR"
+      recognitionConfig.languageCode = "en-US"
       recognitionConfig.maxAlternatives = 30
       recognitionConfig.enableWordTimeOffsets = true
 
