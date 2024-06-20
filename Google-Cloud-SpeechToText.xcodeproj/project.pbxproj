@@ -7,18 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		53E383802C2443B300D7BD22 /* Google_Cloud_SpeechToTextApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3837F2C2443B300D7BD22 /* Google_Cloud_SpeechToTextApp.swift */; };
+		1EE58818EA8039D88A1AFE30 /* Pods_Google_Cloud_SpeechToText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A49605DFA2F7D4EEEFFDBB7 /* Pods_Google_Cloud_SpeechToText.framework */; };
+		53E383802C2443B300D7BD22 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3837F2C2443B300D7BD22 /* MainApp.swift */; };
 		53E383822C2443B300D7BD22 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E383812C2443B300D7BD22 /* ContentView.swift */; };
 		53E383842C2443B400D7BD22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E383832C2443B400D7BD22 /* Assets.xcassets */; };
 		53E383872C2443B400D7BD22 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53E383862C2443B400D7BD22 /* Preview Assets.xcassets */; };
+		53E383912C24455700D7BD22 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3838E2C24455700D7BD22 /* AudioController.swift */; };
+		53E383922C24455700D7BD22 /* SpeechRecognitionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53E3838F2C24455700D7BD22 /* SpeechRecognitionService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53E3837C2C2443B300D7BD22 /* Google-Cloud-SpeechToText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google-Cloud-SpeechToText.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		53E3837F2C2443B300D7BD22 /* Google_Cloud_SpeechToTextApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Google_Cloud_SpeechToTextApp.swift; sourceTree = "<group>"; };
+		53E3837F2C2443B300D7BD22 /* MainApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainApp.swift; sourceTree = "<group>"; };
 		53E383812C2443B300D7BD22 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		53E383832C2443B400D7BD22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		53E383862C2443B400D7BD22 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		53E3838D2C24455700D7BD22 /* Speech-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Speech-Bridging-Header.h"; sourceTree = "<group>"; };
+		53E3838E2C24455700D7BD22 /* AudioController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
+		53E3838F2C24455700D7BD22 /* SpeechRecognitionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechRecognitionService.swift; sourceTree = "<group>"; };
+		5A49605DFA2F7D4EEEFFDBB7 /* Pods_Google_Cloud_SpeechToText.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Cloud_SpeechToText.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		928137E67785A770A5179276 /* Pods-Google-Cloud-SpeechToText.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google-Cloud-SpeechToText.debug.xcconfig"; path = "Target Support Files/Pods-Google-Cloud-SpeechToText/Pods-Google-Cloud-SpeechToText.debug.xcconfig"; sourceTree = "<group>"; };
+		A76A04D7642E2F20B6876B33 /* Pods-Google-Cloud-SpeechToText.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google-Cloud-SpeechToText.release.xcconfig"; path = "Target Support Files/Pods-Google-Cloud-SpeechToText/Pods-Google-Cloud-SpeechToText.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,17 +35,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1EE58818EA8039D88A1AFE30 /* Pods_Google_Cloud_SpeechToText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		151715597B472AAFE74A3380 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A49605DFA2F7D4EEEFFDBB7 /* Pods_Google_Cloud_SpeechToText.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		53E383732C2443B300D7BD22 = {
 			isa = PBXGroup;
 			children = (
 				53E3837E2C2443B300D7BD22 /* Google-Cloud-SpeechToText */,
 				53E3837D2C2443B300D7BD22 /* Products */,
+				55B2A418D025DC188D15C08C /* Pods */,
+				151715597B472AAFE74A3380 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -51,7 +71,9 @@
 		53E3837E2C2443B300D7BD22 /* Google-Cloud-SpeechToText */ = {
 			isa = PBXGroup;
 			children = (
-				53E3837F2C2443B300D7BD22 /* Google_Cloud_SpeechToTextApp.swift */,
+				53E383902C24455700D7BD22 /* GoogleSpeechToText */,
+				53E3838D2C24455700D7BD22 /* Speech-Bridging-Header.h */,
+				53E3837F2C2443B300D7BD22 /* MainApp.swift */,
 				53E383812C2443B300D7BD22 /* ContentView.swift */,
 				53E383832C2443B400D7BD22 /* Assets.xcassets */,
 				53E383852C2443B400D7BD22 /* Preview Content */,
@@ -67,6 +89,24 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		53E383902C24455700D7BD22 /* GoogleSpeechToText */ = {
+			isa = PBXGroup;
+			children = (
+				53E3838E2C24455700D7BD22 /* AudioController.swift */,
+				53E3838F2C24455700D7BD22 /* SpeechRecognitionService.swift */,
+			);
+			path = GoogleSpeechToText;
+			sourceTree = "<group>";
+		};
+		55B2A418D025DC188D15C08C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				928137E67785A770A5179276 /* Pods-Google-Cloud-SpeechToText.debug.xcconfig */,
+				A76A04D7642E2F20B6876B33 /* Pods-Google-Cloud-SpeechToText.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +114,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 53E3838A2C2443B400D7BD22 /* Build configuration list for PBXNativeTarget "Google-Cloud-SpeechToText" */;
 			buildPhases = (
+				4DD00E065B2F195110D478AE /* [CP] Check Pods Manifest.lock */,
 				53E383782C2443B300D7BD22 /* Sources */,
 				53E383792C2443B300D7BD22 /* Frameworks */,
 				53E3837A2C2443B300D7BD22 /* Resources */,
+				844C32D647C415342002BFD4 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,13 +174,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4DD00E065B2F195110D478AE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Google-Cloud-SpeechToText-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		844C32D647C415342002BFD4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google-Cloud-SpeechToText/Pods-Google-Cloud-SpeechToText-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google-Cloud-SpeechToText/Pods-Google-Cloud-SpeechToText-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google-Cloud-SpeechToText/Pods-Google-Cloud-SpeechToText-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		53E383782C2443B300D7BD22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				53E383822C2443B300D7BD22 /* ContentView.swift in Sources */,
-				53E383802C2443B300D7BD22 /* Google_Cloud_SpeechToTextApp.swift in Sources */,
+				53E383912C24455700D7BD22 /* AudioController.swift in Sources */,
+				53E383802C2443B300D7BD22 /* MainApp.swift in Sources */,
+				53E383922C24455700D7BD22 /* SpeechRecognitionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +352,7 @@
 		};
 		53E3838B2C2443B400D7BD22 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 928137E67785A770A5179276 /* Pods-Google-Cloud-SpeechToText.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -274,12 +361,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Google-Cloud-SpeechToText/Preview Content\"";
 				DEVELOPMENT_TEAM = MHT8X3GHR9;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -295,6 +384,7 @@
 		};
 		53E3838C2C2443B400D7BD22 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A76A04D7642E2F20B6876B33 /* Pods-Google-Cloud-SpeechToText.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -303,12 +393,14 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Google-Cloud-SpeechToText/Preview Content\"";
 				DEVELOPMENT_TEAM = MHT8X3GHR9;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

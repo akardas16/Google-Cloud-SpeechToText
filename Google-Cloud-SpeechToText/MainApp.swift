@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct Google_Cloud_SpeechToTextApp: App {
+struct MainApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
