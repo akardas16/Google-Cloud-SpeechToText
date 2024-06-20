@@ -3,6 +3,30 @@ Google Cloud Speech to Text API implementation in IOS with SwiftUI
 
 - Add your API_KEY in SpeechRecognitionService class (go to Google Cloud console and enable Speech to Text service)
 
+
+  
+```Swift
+ func startRecord(){
+        AudioController.sharedInstance.recordAudio()
+        
+        AudioController.sharedInstance
+            .textReceivedPublisher.sink {[weak self] text in
+                self?.latestText = text
+                print(text)
+        }.store(in: &cancellables)
+    }
+    
+    func stopRecord(){
+        for i in cancellables{
+            i.cancel()
+        }
+        cancellables.removeAll()
+        AudioController.sharedInstance.stopAudio()
+    }
+```
+
+
+
 <img width="600" alt="Screenshot at Jun 20 14-23-39" src="https://github.com/akardas16/Google-Cloud-SpeechToText/assets/28716129/9a922cfd-32f6-409e-acb9-b117ed8d37dd">
 <img width="600" alt="Screenshot at Jun 20 14-15-35" src="https://github.com/akardas16/Google-Cloud-SpeechToText/assets/28716129/0b519f52-fc27-4a0c-ae68-352ad17caa75">
 
